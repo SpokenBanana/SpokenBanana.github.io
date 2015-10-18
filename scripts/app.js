@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var images = ['images/AR_1.png', 'images/AS_1.png', 'images/image.png', 'images/popcircle.png', 'images/sorterMerge.png'];
-    var title =  ['RegexFractals', 'AsteriodPathFinder', 'ImagePallete', 'PhysicsOnPaper', 'Vision Sorter'];
+    var title =  ['RegexFractals', 'AsteriodPathFinder', 'ImagePalette', 'PhysicsOnPaper', 'Vision Sorter'];
 
     setInterval(function(){
         $('#highlight-image').fadeOut(500, function(){
