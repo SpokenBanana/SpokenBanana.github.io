@@ -37,7 +37,6 @@ body a {
 .highlights {
     padding: 35px;
     margin: 0 auto;
-    width: 100%;
     display: block;
     text-align: center;
     position: relative;
@@ -84,7 +83,6 @@ body a {
     background-color: #123040;
     text-align: center;
     color: white;
-    height: 100%;
 }
 
 .footer h3 a {
