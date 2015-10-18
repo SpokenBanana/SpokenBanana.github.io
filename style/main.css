@@ -37,6 +37,7 @@ body a {
 .highlights {
     padding: 35px;
     margin: 0 auto;
+    width: 100%;
     display: block;
     text-align: center;
     position: relative;
@@ -47,7 +48,7 @@ body a {
 }
 .highlights .title {
     height: 100%;
-    width: 300px;
+    width: 33%;
     float: left;
     text-align: left;
     display: inline-block;
@@ -57,12 +58,12 @@ body a {
 
 .highlights .description {
     float: right;
-    width: 300px;
+    width: 33%;
 }
 
 .highlights img {
     text-align: center;
-    max-width: 500px;
+    max-width: 33%;
     vertical-align: middle;
     display: inline-block;
     max-height: 300px;
@@ -83,6 +84,7 @@ body a {
     background-color: #123040;
     text-align: center;
     color: white;
+    height: 100%;
 }
 
 .footer h3 a {
