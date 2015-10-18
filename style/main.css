@@ -1,3 +1,97 @@
 body {
-    color: dodgerblue;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #123040;
 }
+
+body a {
+    color: #123040;
+}
+
+.header {
+    margin-right: 0;
+    margin-top: 0;
+    padding: 2px;
+    box-shadow: 0 0 10px 3px #8c8c8c;
+    height: 50px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #123040;
+}
+
+.header-left {
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+
+.header-right {
+    float: right;
+    display: inline-block;
+    position: relative;
+}
+
+.highlights {
+    padding: 35px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    background-color: rgb(117, 255, 196);
+    color: #123040;
+
+    height: 300px;
+}
+.highlights .title {
+    height: 100%;
+    width: 300px;
+    float: left;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.highlights .description {
+    float: right;
+    width: 300px;
+}
+
+.highlights img {
+    text-align: center;
+    max-width: 500px;
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 300px;
+}
+
+.content .about {
+    text-align: center;
+}
+
+.about-content {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 600px;
+}
+
+.footer {
+    background-color: #123040;
+    text-align: center;
+    color: white;
+}
+
+.footer h3 a {
+    color: white;
+}
+
+.footer h3 {
+    margin-left: 20px;
+    color: white;
+    display: inline-block;
+}
+
