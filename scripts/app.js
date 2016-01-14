@@ -28,5 +28,9 @@ $(document).ready(function() {
                 Math.floor(255 * (y / obj.height())) + ')');
     });
 
+    var canvas = document.getElementById("canvas");
+    canvas.width = 700;
+    canvas.height = 500;
+
 });
 

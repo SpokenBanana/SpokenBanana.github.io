@@ -14,7 +14,7 @@ body a {
     margin-top: 0;
     padding: 2px;
     height: 50px;
-    background-color: #123040;
+    background-color: #42b0ea;
     color: white;
 }
 
@@ -94,7 +94,7 @@ body a {
 }
 
 .about h2 {
-    background-color: #123040;
+    background-color: #42b0ea;
     color:white;
     width: 400px;
     margin: 10px auto;
@@ -102,9 +102,13 @@ body a {
 }
 
 .footer {
-    background-color: #123040;
+    background-color: #42b0ea;
     text-align: center;
     color: white;
+}
+
+.footer img {
+    margin-right: 20px;
 }
 
 .footer h3 a {
@@ -115,5 +119,11 @@ body a {
     margin-left: 20px;
     color: white;
     display: inline-block;
+}
+
+canvas {
+    border: 1px solid #123040;
+    display: block;
+    margin: 10px auto;
 }
 
