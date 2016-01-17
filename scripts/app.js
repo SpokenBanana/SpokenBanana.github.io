@@ -31,6 +31,39 @@ $(document).ready(function() {
     var canvas = document.getElementById("canvas");
     canvas.width = 700;
     canvas.height = 500;
+    var context = canvas.getContext('2d');
+    var colors = ['red', 'lightcoral', 'white', 'lawngreen', 'lightblue', 'chocolate', 'navy', 'fuchsia', 'lightseagreen'];
+
+    function createArt(x, y, width, height, amountLeft) {
+        // horizontal or vertical
+        if (amountLeft == 0) return;
+        if (amountLeft < 3 && Math.floor(Math.random() * 100) % 14 == 0) return;
+        var hOrv = Math.floor(Math.random()*100) % 2 == 0;
+        var color = colors[Math.floor(Math.random()*colors.length)];
+        if (hOrv) {
+            context.fillStyle = color;
+            context.fillRect(x, y, width, height/2);
+            createArt(x, y, width, height/2, amountLeft-1);
+            createArt(x, y + height/2, width, height/2, amountLeft-1);
+
+            context.fillStyle = 'black';
+            context.rect(x, y, width, height/2);
+            context.lineWidth = amountLeft;
+            context.stroke();
+        } else {
+            context.fillStyle = color;
+            context.fillRect(x, y, width/2, height);
+            createArt(x, y, width/2, height, amountLeft-1);
+            createArt(x + width/2, y, width/2, height, amountLeft-1);
+
+            context.fillStyle = 'black';
+            context.rect(x, y, width/2, height);
+            context.lineWidth = amountLeft;
+            context.stroke();
+        }
+    }
+
+    createArt(0, 0, canvas.width, canvas.height, 6);
 
 });
 
