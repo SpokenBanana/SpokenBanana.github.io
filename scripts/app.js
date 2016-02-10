@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var images = ['images/AR_1.png', 'images/AS_1.png', 'images/image.png', 'images/popcircle.png', 'images/sorterMerge.png',
-    'images/screenrmg.png'];
+    'images/rmg_screen.png'];
     var title =  ['RegexFractals', 'AsteriodPathFinder', 'ImagePalette', 'PhysicsOnPaper', 'Vision Sorter',
     'RateMyGenie'];
 
