@@ -29,11 +29,12 @@ $(document).ready(function() {
     });
 
     var canvas = document.getElementById("canvas");
-    canvas.width = 700;
-    canvas.height = 500;
+    canvas.width = 600;
+    canvas.height = 600;
     var context = canvas.getContext('2d');
-    var colors = ['red', 'lightcoral', 'white', 'lawngreen', 'lightblue', 'chocolate', 'navy', 'fuchsia', 'lightseagreen'];
+    var colors = ['red', 'lightcoral', 'pink', 'lawngreen', 'lightblue', 'chocolate', 'cornflowerblue', 'fuchsia', 'lightseagreen'];
 
+    // old art code, keep in case I want to use it again.
     function createArt(x, y, width, height, amountLeft) {
         // horizontal or vertical
         if (amountLeft == 0) return;
@@ -63,7 +64,91 @@ $(document).ready(function() {
         }
     }
 
-    createArt(0, 0, canvas.width, canvas.height, 6);
+    // helper methods for Conway
+    function Cell(x, y, dead) {
+        this.color = 0;
+        this.x = x;
+        this.y = y;
+        this.dead = dead;
+    }
+
+    function mod(x, n) {
+        return (((x % n)+n)%n);
+    }
+
+    function Conway(size) {
+        this.cells = [];
+        this.size = size;
+        this.rowsize = canvas.width / size;
+
+        for (var i = 0; i < this.rowsize; i++) {
+            var row = [];
+            for (var j = 0; j < this.rowsize; j++)
+                row.push(new Cell(j, i, (Math.random() * 100) < 50 == 0));
+            this.cells.push(row);
+        }
+
+        this.getNeighbors = function(x, y) {
+            var locations = [
+                [-1, -1], [0, -1], [1, -1],
+                [-1, 0],    [1, 0],
+                [-1, 1], [0, 1], [1, 1]
+            ];
+            var results = 0;
+            for (var i = 0; i < locations.length; i++) {
+                var nx = mod(x + locations[i][0], this.rowsize);
+                var ny = mod(y + locations[i][1], this.rowsize);
+                if (!this.cells[nx][ny].dead) results++;
+            }
+            return results;
+        };
+
+        this.update = function() {
+            var tochange = [];
+            for (var i = 0; i < this.rowsize; i++) {
+                for (var j = 0; j < this.rowsize; j++) {
+                    var neighborCount = this.getNeighbors(j, i);
+                    if (!this.cells[j][i].dead) {
+                        if (neighborCount < 2 || neighborCount > 3) {
+                            tochange.push([j, i]);
+                        }
+                    }
+                    else {
+                        if (neighborCount == 3)
+                            tochange.push([j, i]);
+                    }
+                }
+            }
+            for (i = 0; i < tochange.length; i++) {
+                var x = tochange[i][0];
+                var y = tochange[i][1];
+                this.cells[x][y].dead = !this.cells[x][y].dead;
+                this.cells[x][y].color = (this.cells[x][y].color + 1) % colors.length;
+            }
+        };
+
+        this.generate = function(amount) {
+            for (i = 0; i < amount; i++)
+                this.update();
+        };
+
+
+        this.render = function() {
+			for (i = 0; i < this.rowsize; i++) {
+				for (j = 0; j < this.rowsize; j++) {
+					context.fillStyle = colors[this.cells[j][i].color];
+                    if (!this.cells[j][i].dead) context.fillStyle = 'black';
+					context.fillRect(j *this.size, i * this.size, this.size, this.size);
+				}
+			}
+        }
+
+    }
+
+    //createArt(0, 0, canvas.width, canvas.height, 6);
+    var c = new Conway(15);
+    c.generate(50);
+    c.render();
 
 });
 
