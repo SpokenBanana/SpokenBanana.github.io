@@ -43,14 +43,24 @@ body {
   .highlights p {
     font-size: 2em; }
 
-.examples {
+.skills {
   background-color: #102a38; }
+  .skills p {
+    text-align: left;
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    font-size: 1.7em; }
+
+.examples {
+  background-color: #1b5f6d; }
 
 .art {
-  background-color: #102a38; }
+  background-color: #295461; }
 
 .projects {
-  background-color: #102a38; }
+  background-color: #0f3d4f; }
   .projects a {
     text-decoration: none;
     margin: 0;
@@ -60,10 +70,10 @@ body {
     width: 450px;
     height: 450px;
     border-radius: 10px;
-    background-color: #03171b;
     display: inline-block;
     vertical-align: middle;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
     padding: 5px; }
     .projects .project .project-img {
       max-width: 200px;
@@ -94,7 +104,10 @@ body {
   vertical-align: middle;
   padding: 20px;
   text-align: left; }
-  .example .image-container {
+  .example h2 {
+    text-align: center; }
+  .example .img-container {
+    width: 450px;
     display: block;
     position: relative;
     margin: 0 auto;
@@ -114,7 +127,7 @@ body {
   display: block; }
 
 .footer {
-  background-color: #002234;
+  background-color: #2b4253;
   text-align: center;
   color: white;
   height: 50px;
