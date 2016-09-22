@@ -3,6 +3,7 @@
 	<title>SpokenBanana</title>
 	<link rel="stylesheet" href="style/main.css"/>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Carme|Hind|Raleway" rel="stylesheet">
 	<link rel="icon" href="images/favicon-16.png" sizes="16x16">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="scripts/app.js"></script>
@@ -16,130 +17,152 @@
 </div>
 
 -->
-	<div class="content">
+	<div id="content" class="content">
+
 		<div class="highlights">
-			<h1>David Santana</h1>
+			<h1 id="name">David Santana</h1>
             <div class="about-content">
 				<p>A student and a CS lab tutor at UNCG studying computer science with a minor in mathematics</p>
-				<p>This summer I will be joining Google as an Engineering Practicum intern!</p>
+				<p>Just finished working at Google as an Engineering Practicum intern this past summer!</p>
 				<p>I'm constantly working on some new project outside of class, these are some examples of them</p>
 				<p>I highly encourage a good look through my github, I really am proud of what I've done with them!
 				More to come.</p>
 			</div>
 		</div>
-		<div class="about skills">
+
+		<div id="skills" class="about skills">
 			<h1 class="title">Skills</h1>
-			<p>I am proficient in Java, Python, Javascript, HTML/CSS, and C#! I have created a reasonable sized project in each language
-			to show for it</p>
-			<p>I have some experience in C++, Go, and Dart as well, though projects made with these languages aren't as big
-			as the rest so I am building my skills on these languages.</p>
-			<p>Either way, I am always learning and growing my skill set so this is not set in stone. I love using what
-				I know to make ideas that come to me come to life, below are some examples of that!</p>
+			<div class="abt-body">
+                <div class="langs">
+                    <div class="lang">Python</div>
+                    <div class="lang">Java</div>
+                    <div class="lang">C#</div>
+                    <div class="lang">C/C++</div>
+                    <div class="lang">Javascript</div>
+                    <div class="lang">HTML/CSS</div>
+                </div>
+                <p>I have some experience in Go, and Dart as well, though projects made with these languages aren't as big
+                as the rest so I am building my skills on these languages.</p>
+                <p>I am always learning and growing my skill set so this is not set in stone. I love using what
+                    I know to make ideas that come to me come to life, below are some examples of that!</p>
+            </div>
 		</div>
-		<div class="about projects">
+
+		<div id="experience" class="about experience">
+			<h1 class="title">Experience</h1>
+
+			<div class="abt-body">
+                <div class="exp-about">
+                    <img src="images/google.png" alt="Google" width="250px">
+                    <h2>Engineering Practicum Intern</h2>
+                    <h3>Summer 2016</h3>
+                    <p>Implemented a type scheme system to one of Google's largest indexing repository system</p>
+                </div>
+
+                <div class="exp-about">
+                    <img src="images/uncg.png" alt="UNCG" width="170px" height="170px">
+                    <h2>Research Assistant</h2>
+                    <h3>Fall Semester 2016</h3>
+                    <p>Research in the IoT. Finding Ontologies to create a "smart house" by having devices working together</p>
+                </div>
+
+                <div class="exp-about">
+                    <img src="images/multigen.png" alt="MultiGEN" width="250px">
+                    <h2>Programmer</h2>
+                    <h3>March - May, August - Present</h3>
+                    <p>Developed a program from scratch that analyzed various DNA files for infectious diseases.</p>
+                </div>
+
+                <div class="exp-about">
+                    <img src="images/uncg.png" alt="UNCG" width="170px" height="170px">
+                    <h2>Lab Tutor</h2>
+                    <h3>Sprint Semester 2016 + Fall Semester 2016</h3>
+                    <p>Helped CS underclassmen with their assignments and their understanding of the material in class.</p>
+                </div>
+            </div>
+
+		</div>
+
+		<div id="projects" class="about projects">
 			<h1 class="title">Project Highlights</h1>
-			<p>I've created a lot projects, here are some of my favorite ones! Some more are in my github if you want to check them out!</p>
+			<div class="abt-body">
+                <a href="https://github.com/SpokenBanana/PhysicsOnPaper">
+                    <div class="project">
+                        <h2>Physics on paper</h2>
+                        <p class="proj-desc">
+                            Given a drawing, this program will use your web-cam to find the shapes you've drawn, then turn into
+                            2D objects! You can click on them and they will fall and collide with your other drawings!
+                        </p>
+                        <img class="project-img" src="images/popsmile.png" alt="pop">
+                    </div>
+                </a>
 
-			<a href="https://github.com/SpokenBanana/PhysicsOnPaper" target="_blank">
+                <a href="https://github.com/SpokenBanana/SortingVision" >
+                    <div class="project">
+                        <h2>Sorting visualizer</h2>
+                        <p class="proj-desc">
+                            This program lets you see sorting algorithms do their work! You can change the input size and see a
+                            visualization of different sorting algorithms.
+                        </p>
+                        <img src="images/sorterMerge.png" alt="sorter" class="project-img">
+                    </div>
+                </a>
+
+                <a href="https://github.com/SpokenBanana/AsteroidPathFinder" >
                 <div class="project">
-                    <h2>Physics on paper</h2>
+                    <h2>Asteroid path finding</h2>
                     <p class="proj-desc">
-                        Given a drawing, this program will use your web-cam to find the shapes you've drawn, then turn into
-                        2D objects! You can click on them and they will fall and collide with your other drawings!
+                        Randomly generates a maze filled with "asteroids" and "gravity wells" and will find a path between
+                        two points using the A* search algorithm! It will show an animation of process of finding the path.
+                        You can even edit the map and the program will re-find the shortest path between the two points.
                     </p>
-                    <img class="project-img" src="images/popsmile.png" alt="pop">
+                    <img src="images/AS_1.png" alt="path" class="project-img">
                 </div>
-			</a>
+                </a>
 
-			<a href="https://github.com/SpokenBanana/SortingVision" target="_blank">
-				<div class="project">
-                    <h2>Sorting visualizer</h2>
-					<p class="proj-desc">
-						This program lets you see sorting algorithms do their work! You can change the input size and see a
-						visualization of different sorting algorithms.
-					</p>
-                    <img src="images/sorterMerge.png" alt="sorter" class="project-img">
-				</div>
-			</a>
-			
-			<a href="https://github.com/SpokenBanana/AsteroidPathFinder" target="_blank">
-			<div class="project">
-				<h2>Asteroid path finding</h2>
-				<p class="proj-desc">
-					Randomly generates a maze filled with "asteroids" and "gravity wells" and will find a path between
-					two points using the A* search algorithm! It will show an animation of process of finding the path.
-					You can even edit the map and the program will re-find the shortest path between the two points.
-				</p>
-				<img src="images/AS_1.png" alt="path" class="project-img">
+                <a href="https://github.com/SpokenBanana/DailyProgrammer" >
+                    <div class="project">
+                        <h2>Regex fractals</h2>
+                        <p class="proj-desc">
+                            This will recursively split the screen into 4 quadrants, each quadrant holds it's respective quadrant
+                            and it's parent's number together as a string. After we have a split each quadrant small enough, you can feed
+                            the program a regex pattern and each cell that matches it will be colored.
+                        </p>
+                        <img src="images/AR_1.png" alt="regex" class="project-img">
+                    </div>
+                </a>
 			</div>
-			</a>
-			
-			<a href="https://github.com/SpokenBanana/DailyProgrammer" target="_blank">
-                <div class="project">
-                    <h2>Regex fractals</h2>
-                    <p class="proj-desc">
-                        This will recursively split the screen into 4 quadrants, each quadrant holds it's respective quadrant
-                        and it's parent's number together as a string. After we have a split each quadrant small enough, you can feed
-                        the program a regex pattern and each cell that matches it will be colored.
-                    </p>
-                    <img src="images/AR_1.png" alt="regex" class="project-img">
-                </div>
-			</a>
-
-			<a href="https://github.com/SpokenBanana/RateMyGenie" target="_blank">
-                <div class="project">
-                    <h2>RateMyGenie</h2>
-                    <p class="proj-desc">
-                        This is a chrome extension that takes ratings from ratemyprofessor.com and puts them into UNCG Genie's
-                        course listing page. So students can easily see professor's ratings as they are looking for courses!
-                    </p>
-                    <img src="images/rmg_screen.png" alt="ratemygenie" class="project-img">
-                </div>
-			</a>
-
-			<a href="https://github.com/SpokenBanana/PicturePalet" target="_blank">
-                <div class="project">
-                    <h2>Image Palette</h2>
-                    <p class="proj-desc">
-                        This is my first twitter bot! If you tweet at it with two images, it will re-create the second image
-                        using only the pixels in the first image! Really cool effects are made and I love the results.
-                    </p>
-                    <img src="images/image.png" alt="image" class="project-img">
-                </div>
-			</a>
-
 		</div>
 
-		<div class="about examples">
+		<div id="live" class="about examples">
 			<h1 class="title">Live Examples</h1>
 			<div class="example">
 				<h2>Photo Quads</h2>
 				<div class="img-container">
-					<a href="http://www.photoquads.appspot.com" target="_blank">
+					<a href="http://www.photoquads.appspot.com" >
 						<img class="imgover" src="images/quad.png" alt="quad">
 					</a>
 				</div>
-				<p>I have a little demo of one of my projects called photoquads</p>
 				<p>It takes an image and, using a quad tree, it will split the image into rectangles depending on
 				which node in the tree is the farthest from it's estimated average color.</p>
-				<p><a href="http://www.photoquads.appspot.com" target="_blank">Here is the link!</a></p>
+				<p><a href="http://www.photoquads.appspot.com" >Here is the link!</a></p>
 			</div>
 			<div class="example">
 				<h2>Image Palette</h2>
 				<div class="img-container">
-					<a href="http://twitter.com/ImagePalette" target="_blank">
+					<a href="http://twitter.com/ImagePalette" >
 						<img class="imgover" src="images/image.png" alt="image">
 					</a>
 				</div>
 				<p>I also made a twitter bot you should tweet at! it takes two images and using only the pixels in the first image, it will re-create the second
 				</p>
 				<p>
-					It's handle is <a href="http://twitter.com/ImagePalette" target="_blank">@ImagePalette</a>
+					It's handle is <a href="http://twitter.com/ImagePalette" >@ImagePalette</a>
 				</p>
 			</div>
 			<div class="example">
 				<h2>RateMyGenie</h2>
-				<a target="_blank"
+				<a
 				   href="https://chrome.google.com/webstore/detail/ratemygenie/jljecaofmgnnpfkaliamhnkilgneamjk?hl=en-US">
 				<img class="imgover" src="images/rmg_screen.png" alt="ratemygenie"></a>
 
@@ -148,7 +171,7 @@
 					and puts them in UNCG course listing page
 				</p>
 				<p>
-					Here's the <a target="_blank"
+					Here's the <a
 						href="https://chrome.google.com/webstore/detail/ratemygenie/jljecaofmgnnpfkaliamhnkilgneamjk?hl=en-US">
 					chrome web store link!
 				</a>
@@ -157,7 +180,7 @@
 
 		</div>
 
-		<div class="about art">
+		<div id="art" class="about art">
 			<h1 class="title">Randomly generated art</h1>
 			<p>To say thanks for visiting! It may be ugly but it's yours.</p>
 			<canvas id="canvas">
@@ -170,7 +193,7 @@
 	</div>
 
 	<div class="footer">
-		<a href="http://www.github.com/SpokenBanana" target="_blank"><img src="images/GitHub-Mark-32px.png" alt="Github"></a>
+		<a href="http://www.github.com/SpokenBanana" ><img src="images/GitHub-Mark-32px.png" alt="Github"></a>
 		<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 		<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/david-santana-44007777" data-format="click" data-related="false" data-text="David Santana"></script>
 		<h3>santana21796@me.com</h3>

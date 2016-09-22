@@ -4,22 +4,58 @@ $(document).ready(function() {
     var title =  ['RegexFractals', 'AsteriodPathFinder', 'ImagePalette', 'PhysicsOnPaper', 'Vision Sorter',
     'RateMyGenie'];
 
+	var clouds = [];
 
-    /*
-    $('.highlights').mousemove(function(event) {
-        var obj = $(this);
-        var offset = obj.offset();
-        var x = event.pageX - offset.left;
-        var y = event.pageY - offset.top;
-        obj.css('background-color', 'rgb(' + Math.floor(255 * (x / obj.width())).toString() + ',255,'+
-                Math.floor(255 * (y / obj.height())) + ')');
+	function Cloud() {
+		this.div = $("<img src='images/cloud.png'/>");
+		this.div.addClass("cloud");
+
+		this.x = 50 + Math.floor(Math.random() * 1700);
+		this.y = 50 + Math.floor(Math.random() * 500);
+
+		this.maxOpacity = Math.random();
+		this.div.css({left: this.x, top: this.y, opacity: 0, width: 100, height: 51});
+		// this.div.css("background-image", "url(images/cloud.png");
+		this.speedx = 1 + Math.floor(Math.random() * 2);
+		this.aliveTime = 50 + Math.floor(Math.random() * 300);
+		this.increaseOpacityTime = this.aliveTime * .25;
+		this.decreaseOpcacityTime = this.aliveTime - this.increaseOpacityTime;
+		this.time = 0;
+
+		$("#content").append(this.div);
+
+		this.update = function() {
+			this.time++;
+			if (this.time < this.increaseOpacityTime) {
+				this.div.css({opacity: (this.time/parseFloat(this.increaseOpacityTime))*this.maxOpacity});
+			}
+			if (this.time >= this.decreaseOpcacityTime && this.time <= this.aliveTime) {
+				this.div.css({opacity: ((this.aliveTime - this.time)/parseFloat(this.increaseOpacityTime))*this.maxOpacity});
+			}
+			if (this.time >= this.aliveTime) {
+				this.div.remove();
+				console.log('remove');
+			}
+			else {
+				this.x += this.speedx;
+				this.div.css({left: this.x});
+			}
+		}
+	}
+
+    $(window).scroll(function() {
+	    if ($(window).scrollTop() >= $("#nav").scrollTop()) {
+		    $('#nav').addClass("navbar-fixed");
+	    }
+	    if ($(window).scrollTop() < 660){
+		    $('#nav').removeClass("navbar-fixed");
+	    }
     });
-     */
 
 
     var canvas = document.getElementById("canvas");
-    canvas.width = 600;
-    canvas.height = 600;
+    canvas.width = 300;
+    canvas.height = 300;
     var context = canvas.getContext('2d');
     var colors = ['red', 'lightcoral', 'pink', 'lawngreen', 'lightblue', 'chocolate', 'cornflowerblue', 'fuchsia', 'lightseagreen'];
 
@@ -138,6 +174,19 @@ $(document).ready(function() {
     var c = new Conway(15);
     c.generate(50);
     c.render();
+
+	/*
+	setInterval(function() {
+		if (Math.random() * 400 < 10) {
+			clouds.push(new Cloud());
+			console.log(clouds.length);
+		}
+		clouds = clouds.filter(function(cloud) {
+			cloud.update();
+			return cloud.time <= cloud.aliveTime;
+		});
+	}, 1000/60);
+	*/
 
 });
 
