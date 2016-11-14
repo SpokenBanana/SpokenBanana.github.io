@@ -1,8 +1,10 @@
 $theme: #002234
-$compliment: #285fae
+$compliment: #1987c6
+
 body
   margin: 0
   padding: 0
+  background-color: #f2f2f2
   font-family: "Hind", sans-serif
   a
     color: $theme
@@ -19,9 +21,9 @@ body
 .header
   color: $theme
   margin-top: 0
-  height: 50px
+  height: 60px
   padding: 2px
-  backgroud-color: white
+  background-color: white
   a
     color: $theme
     text-decoration: none
@@ -42,9 +44,9 @@ body
 
 .highlights
   background-color: white
-  margin-top: 40px
+  margin: 0
+  padding: 30px
   color: $theme
-  padding: 35px
   text-align: center
   h1
     font-size: 2em
@@ -52,11 +54,22 @@ body
   p
     font-size: 1.5em
 
+.content-body
+  width: 50%
+  display: block
+  box-shadow: 2px 10px 20px 1px gray
+  margin: 0 auto 20px
+
+.intro
+  p
+    width: 750px
+    margin: 15px auto
+    font-size: 1.3em
+
 .skills
   background-color: white
   p
     text-align: left
-    width: 1200px
     margin: 0 auto
     display: block
     padding: 10px
@@ -67,31 +80,39 @@ body
 
 .art
   color: #295461
-  //background-color: #1b3440
 
 .projects
   background-color: white
-  //background-color: #1b3440
+  padding: 0
+  .tagline
+    font-size: 1.2em
+    width: 80%
+    margin: 0 auto
   a
     text-decoration: none
     margin: 0
     display: inline-block
     position: relative
   .project
-    width: 380px
+    width: 400px
     height: 450px
-    border-radius: 10px
+    //box-shadow: 2px 5px 15px 0 gray
+    //border: 1px solid lightgray
     display: inline-block
     vertical-align: middle
     margin-top: 20px
     margin-right: 20px
-    padding: 5px
+    h2
+      color: $theme
+      border-bottom: 3px solid $compliment
+      padding: 5px
+      margin-top: 0
     .project-img
       max-width: 200px
       max-height: 200px
     .proj-desc
       text-align: left
-      width: 400px
+      width: 380px
       margin: 0 auto
       padding: 10px
 
@@ -100,7 +121,7 @@ body
   display: block
   text-align: center
   color: $theme
-  border-bottom: 1px solid $theme
+  background-color: white
   .title
     font-family: "Carme", sans-serif
     display: block
@@ -111,24 +132,30 @@ body
     margin: 0 auto
 
 .abt-body
-  margin-top: 150px
-  margin-bottom: 150px
+  margin-top: 100px
+  padding-bottom: 100px
   font-family: "Hind", sans-serif
+  background-color: white
 
 .exp-about
   width: 400px
   display: inline-block
+
 .example
   width: 450px
   height: 500px
   display: inline-block
   position: relative
-  margin: 0 auto
+  margin: 10px auto
   vertical-align: middle
-  padding: 20px
   text-align: left
+  border: 1px solid lightgray
+  p
+    width: 400px
+    margin: 0 auto
   h2
     text-align: center
+    border-bottom: 3px solid lightgray
   .img-container
     width: 450px
     display: block
