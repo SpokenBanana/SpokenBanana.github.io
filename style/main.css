@@ -57,9 +57,8 @@ body {
   margin: 0 auto 20px; }
 
 .intro p {
-  width: 750px;
   margin: 15px auto;
-  font-size: 1.3em; }
+  font-size: 1.6em; }
 
 .skills {
   background-color: white; }
@@ -133,6 +132,8 @@ body {
 .exp-about {
   width: 400px;
   display: inline-block; }
+  .exp-about h3 {
+    color: #666666; }
 
 .example {
   width: 450px;
@@ -141,14 +142,12 @@ body {
   position: relative;
   margin: 10px auto;
   vertical-align: middle;
-  text-align: left;
-  border: 1px solid lightgray; }
+  text-align: left; }
   .example p {
     width: 400px;
     margin: 0 auto; }
   .example h2 {
-    text-align: center;
-    border-bottom: 3px solid lightgray; }
+    text-align: center; }
   .example .img-container {
     width: 450px;
     display: block;
