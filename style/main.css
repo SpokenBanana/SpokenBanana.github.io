@@ -2,26 +2,23 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-  font-family: "Hind", sans-serif; }
+  font-family: "Raleway", sans-serif; }
   body a {
-    color: #002234; }
+    color: #003855; }
 
 #name {
   font-weight: lighter;
   font-size: 5em;
   font-family: "Raleway", sans-serif; }
 
-.cloud {
-  position: absolute; }
-
 .header {
-  color: #002234;
+  color: #003855;
   margin-top: 0;
   height: 60px;
   padding: 2px;
   background-color: white; }
   .header a {
-    color: #002234;
+    color: #003855;
     text-decoration: none; }
   .header .header-left {
     float: left;
@@ -42,7 +39,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 30px;
-  color: #002234;
+  color: #003855;
   text-align: center; }
   .highlights h1 {
     font-size: 2em;
@@ -55,10 +52,6 @@ body {
   display: block;
   box-shadow: 2px 10px 20px 1px gray;
   margin: 0 auto 20px; }
-
-.intro p {
-  margin: 15px auto;
-  font-size: 1.6em; }
 
 .skills {
   background-color: white; }
@@ -95,7 +88,7 @@ body {
     margin-top: 20px;
     margin-right: 20px; }
     .projects .project h2 {
-      color: #002234;
+      color: #003855;
       border-bottom: 3px solid #1987c6;
       padding: 5px;
       margin-top: 0; }
@@ -112,27 +105,37 @@ body {
   margin: 0 auto;
   display: block;
   text-align: center;
-  color: #002234;
+  color: #003855;
   background-color: white; }
   .about .title {
-    font-family: "Carme", sans-serif;
+    font-weight: lighter;
+    font-family: "Raleway", sans-serif;
     display: block;
     background-color: #1987c6;
     padding: 15px;
     color: white;
     text-align: center;
     margin: 0 auto; }
+  .about p {
+    font-size: 1.1em; }
+
+.intro p {
+  margin: 15px auto;
+  font-size: 1.6em; }
 
 .abt-body {
   margin-top: 100px;
   padding-bottom: 100px;
-  font-family: "Hind", sans-serif;
+  font-family: "Carme", sans-serif;
   background-color: white; }
 
 .exp-about {
   width: 400px;
   display: inline-block; }
+  .exp-about h2 {
+    font-family: "Raleway", sans-serif; }
   .exp-about h3 {
+    font-family: "Raleway", sans-serif;
     color: #666666; }
 
 .example {
@@ -145,7 +148,7 @@ body {
   text-align: left; }
   .example p {
     width: 400px;
-    margin: 0 auto; }
+    margin: 10px auto; }
   .example h2 {
     text-align: center; }
   .example .img-container {
@@ -166,16 +169,17 @@ body {
 #explanation {
   width: 600px;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  padding: 10px; }
 
 .footer {
   background-color: white;
   text-align: center;
-  color: #002234;
+  color: #003855;
   height: 50px;
   padding: 10px; }
   .footer a {
-    color: #002234; }
+    color: #003855; }
   .footer h3 {
     display: inline-block;
     margin-left: 20px; }
@@ -193,7 +197,7 @@ body {
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 100px;
     display: inline-block; }
 
