@@ -36,11 +36,12 @@ div {
 .about {
   display: flex;
   justify-content: center;
+  font-size: 1.5em;
 }
 
 .name {
   order: 1;
-  font-size: 4em;
+  font-size: 5.5em;
   color: #4C5B61;
 }
 
@@ -63,7 +64,7 @@ div {
 .title {
   margin-top: 10px;
   display: flex;
-  font-size: 2.7em;
+  font-size: 3.4em;
   align-self: center;
 }
 
@@ -109,7 +110,7 @@ div {
 }
 
 .pos-title {
-  font-size: 2em;
+  font-size: 2.0em;
 }
 
 .dates {
@@ -117,7 +118,8 @@ div {
 }
 
 .description {
-  width: 400px;
+  width: 450px;
+  font-size: 1.2em;
 }
 
 .count {
@@ -136,6 +138,10 @@ div {
   padding: 10px;
 }
 
+.contact-description {
+  font-size: 1.3em;
+}
+
 .contact-icons {
   padding: 10px;
   width: 80%;
@@ -146,4 +152,5 @@ div {
   padding: 10px;
   flex-direction: column;
   align-items: center;
+  font-size: 1.2em;
 }
