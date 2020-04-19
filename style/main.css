@@ -53,11 +53,12 @@ div {
 
 .stuff {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 20px;
   justify-content: space-around;
+  align-contents: center;
   align-self: center;
-  width: 100%;
+  width: 50%;
   flex-wrap: wrap;
 }
 
@@ -79,7 +80,8 @@ div {
 }
 
 .projects {
-  order: 2;
+  width: 60%
+  flex-wrap: wrap;
 }
 
 .contact {
@@ -94,7 +96,7 @@ div {
 }
 
 .logo-container {
-  width: 300px;
+  width: 200px;
 }
 
 .paw-logo {
@@ -112,7 +114,6 @@ div {
 
 .position-info {
   flex-direction: column;
-  padding: 10px;
 }
 
 .pos-title {
